@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated Thu Apr 07 10:10:59 2016 by Dolby Media Generator, Version 2015Jun08.144347 -->
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dolby="http://www.dolby.com/ns/online/DASH" xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-live:2011" type="dynamic" minimumUpdatePeriod="PT3600S" suggestedPresentationDelay="PT1S" availabilityStartTime="2016-02-18T04:45:30" publishTime="2016-02-18T04:45:30" timeShiftBufferDepth="PT3.3S" minBufferTime="PT4S">
+	<ProgramInformation>
+	</ProgramInformation>
+ <Period start="PT0S">
+    <AdaptationSet mimeType="video/mp4" codecs="hvc1.2.1.L153.00" segmentAlignment="true" startWithSAP="1">
+      <SegmentTemplate timescale="60000" duration="120120" media="Rugby_video_$Number$.m4s" initialization="Rugby_video.mp4">
+      </SegmentTemplate>
+      <Representation id="1" bandwidth="21000000" width="3840" height="2160" frameRate="60000/1001"/>
+    </AdaptationSet>
+    <AdaptationSet mimeType="audio/mp4" codecs="ac-4.00.00.01" lang="und" segmentAlignment="true" startWithSAP="1">
+      <SegmentTemplate timescale="48000" duration="94208" media="Rugby_audio_$Number$.m4s" initialization="Rugby_audio.mp4">
+      </SegmentTemplate>
+      <Representation id="2" bandwidth="160000" audioSamplingRate="48000">
+        <AudioChannelConfiguration schemeIdUri="tag:dolby.com,2014:dash:audio_channel_configuration:2011" value="F801"/>
+      </Representation>
+    </AdaptationSet>
+ </Period>
+</MPD>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:mspr="urn:microsoft:playready" xmlns:cenc="urn:mpeg:cenc:2013" availabilityStartTime="2016-08-03T15:18:11" profiles="urn:mpeg:dash:profile:isoff-live:2011,urn:hbbtv:dash:profile:isoff-live:2012" type="static" minBufferTime="PT2S">
+  <Period start="PT0S">
+    <AdaptationSet id="0" maxWidth="1920" maxHeight="1080" maxFrameRate="30000/1001" par="16:9" segmentAlignment="true">
+      <SegmentTemplate startNumber="1" timescale="10000000" duration="20020000" initialization="video/video_init.mp4" media="video/$Number$.m4s" />
+      <Representation id="0" bandwidth="8000000" mimeType="video/mp4" startWithSAP="1" codecs="hev1.1.2.L153.80" width="1920" height="1080" frameRate="30000/1001" sar="1:1" scanType="interlaced" />
+    </AdaptationSet>
+  <AdaptationSet id="1" lang="eng" segmentAlignment="true">
+      <SegmentTemplate startNumber="1" timescale="10000000" duration="20020000" initialization="audio/audio_init.mp4" media="audio/$Number$.m4s" />
+      <Representation id="1" bandwidth="200000" mimeType="audio/mp4" startWithSAP="1" codecs="mp4a.40.2" audioSamplingRate="48000">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+      </Representation>
+    </AdaptationSet> 
+  </Period>
+</MPD>
